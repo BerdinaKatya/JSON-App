@@ -15,7 +15,6 @@ final class TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         0
     }
@@ -24,6 +23,7 @@ final class TableViewController: UITableViewController {
         10
     }
     
+    // MARK: - Private methods
     private func fetchAbiliy() {
         let abilityURL = URL(string: "https://www.dnd5eapi.co/api/ability-scores/cha")!
         URLSession.shared.dataTask(with: abilityURL) { data, _, error in
